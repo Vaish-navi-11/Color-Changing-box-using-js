@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changing Box</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <p class="text"></p>
+    </div>
+    <button onclick="play()">Click Here!</button>
+    <script>
+        var colors = ["Red", "Blue", "Green", "Yellow", "Orange"];
+        var box = document.querySelector(".box");
+        var text = document.querySelector(".text");
+        function play() {
+            let color = colors[Math.floor(Math.random()*colors.length)];
+            box.style.backgroundColor = color;
+            text.innerHTML = "Background Color: " + color;
+            text.style.backgroundColor = "black";
+            text.style.color = color;
+        }
+    </script>
+</body>
+</html>
